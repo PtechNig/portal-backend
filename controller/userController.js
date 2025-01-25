@@ -146,7 +146,7 @@ exports.otpVerification = asyncErrorHandler(async (req, res, next) => {
     }
 
     const subject = "Password Reset Link"
-    const text = `Hi ${user.username},\n\nClick the link below to reset your password:\n\nhttp://localhost:5173/passwordReset/${user._id}\n\nThis link will expire in 24 hours.\n\nThank you.\n\nBest regards,\nYour Team`;
+    const text = `Hi ${user.username},\n\nClick the link below to reset your password:\n\nhttps://portal-frontend-xz5g.onrender.com/passwordReset/${user._id}\n\nThis link will expire in 24 hours.\n\nThank you.\n\nBest regards,\nYour Team`;
 
 
 
