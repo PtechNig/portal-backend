@@ -36,14 +36,6 @@ app.use('/', jobRouter)
 app.use('/', contactRouter)
 app.use('/', applicationRouter)
 
-
-app.use(express.static(path.join(__dirname, 'dist')));
-
-// Catch-all route for React Router
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
-});
-
 const PORT = process.env.PORT || 5050
 
 // Routes
