@@ -145,13 +145,6 @@ exports.otpVerification = asyncErrorHandler(async (req, res, next) => {
         return next(new GlobalError('Invalid OTP', 404))
     }
 
-    const subject = "Password Reset Link"
-    const text = `Hi ${user.username},\n\nClick the link below to reset your password:\n\nhttps://portal-frontend-xz5g.onrender.com/passwordReset/${user._id}\n\nThis link will expire in 24 hours.\n\nThank you.\n\nBest regards,\nYour Team`;
-
-
-
-    await mailer(user.email, subject, text);
-
     res.status(201).json({
         status: 'success',
         message: " OTP verified, Click on the link in your mail to reset your password",
