@@ -147,7 +147,7 @@ exports.otpVerification = asyncErrorHandler(async (req, res, next) => {
 
     res.status(201).json({
         status: 'success',
-        message: " OTP verified, Click on the link in your mail to reset your password",
+        message: " OTP verified",
         userId: user._id
     })
 })
